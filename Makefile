@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adiogo-f <adiogo-f@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: adiogo-f <adiogo-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/15 16:03:01 by adiogo-f          #+#    #+#              #
-#    Updated: 2026/04/22 23:17:08 by adiogo-f         ###   ########.fr        #
+#    Updated: 2026/04/28 16:29:29 by adiogo-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,21 +19,22 @@ RM			= rm -f
 LIBFT_DIR	= libft
 LIBFT		= $(LIBFT_DIR)/libft.a
 
-SRCS		= srcs/main.c \
-			  srcs/error.c \
-			  srcs/parsing.c \
-			  srcs/init.c \
-			  srcs/utils/utils.c \
-			  srcs/utils/stack_utils.c \
-			  srcs/operations/swap.c \
-			  srcs/operations/push.c \
-			  srcs/operations/rotate.c \
-			  srcs/operations/reverse_rotate.c \
-			  srcs/algorithm/sort_small.c \
-			  srcs/algorithm/sort_medium.c \
-			  srcs/algorithm/sort_large.c
+src		= src/main.c \
+			  src/error.c \
+			  src/parsing.c \
+			  src/init.c \
+			  src/utils/utils.c \
+			  src/utils/util.c \
+			  src/utils/stack_utils.c \
+			  src/operations/swap.c \
+			  src/operations/push.c \
+			  src/operations/rotate.c \
+			  src/operations/reverse_rotate.c \
+			  src/algorithm/sort_small.c \
+			  src/algorithm/sort_medium.c \
+			  src/algorithm/sort_large.c
 
-OBJS		= $(SRCS:.c=.o)
+OBJS		= $(src:.c=.o)
 
 all: $(LIBFT) $(NAME)
 

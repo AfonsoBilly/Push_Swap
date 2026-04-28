@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adiogo-f <adiogo-f@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: adiogo-f <adiogo-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 15:23:35 by adiogo-f          #+#    #+#             */
-/*   Updated: 2026/04/22 23:17:12 by adiogo-f         ###   ########.fr       */
+/*   Updated: 2026/04/28 16:30:49 by adiogo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void	rrb(t_stack **b);
 void	rrr(t_stack **a, t_stack **b);
 
 void	error_exit(void);
-void	validate_args(int argc, char **argv);
-t_stack	*init_stack_a(int argc, char **argv);
+void	validate_args(char **args, int count);
+t_stack	*init_stack_a(char **args, int count);
 
 int		is_sorted(t_stack *stack);
 int		find_min(t_stack *stack);
@@ -61,5 +61,8 @@ void	sort_three(t_stack **a);
 void	sort_four(t_stack **a, t_stack **b);
 void	sort_five(t_stack **a, t_stack **b);
 void	sort_large(t_stack **a, t_stack **b);
+
+void	free_split(char **split);
+void	sort(t_stack **a, t_stack **b, int size);
 
 #endif
